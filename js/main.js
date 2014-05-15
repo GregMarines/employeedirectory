@@ -12,7 +12,7 @@ var app = {
         var self = this;
         this.store = new MemoryStore(function() {
 			self.showAlert('Stores Initialized', 'Info');
-            $('body').html(new HomeView(self.store).render().el);
+            $('body').append(new HomeView(self.store).render().el);
         });
     }
 
